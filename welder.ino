@@ -1,3 +1,13 @@
+// BOM:
+
+// Relay: https://alitems.com/g/1e8d1144949a590a4ec116525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F2016-High-Quality-12V-Starter-Relay-Solenoid-Cable-for-Quad-Pit-Bike-110cc-125cc-Safety-Driving%2F32681191278.html 
+// Metal strip: https://alitems.com/g/1e8d1144949a590a4ec116525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F1-PC-1M-8mm-x-0-15-Pure-Ni-Plate-Nickel-Strip-Tape-For-Li-18650%2F32617548208.html 
+// Nano: https://alitems.com/g/1e8d1144949a590a4ec116525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FWith-the-bootloader-Nano-3-0-controller-compatible-for-arduino-nano-CH340-USB-driver-NO-CABLE%2F32341832857.html 
+// Pushbutton: https://alitems.com/g/1e8d1144949a590a4ec116525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F10-Pcs-lot-12mm-x-12mm-x-7-5mm-Panel-PCB-Momentary-Tactile-Tact-Push-Button%2F32219609083.html 
+// Opto: https://alitems.com/g/1e8d1144949a590a4ec116525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F50034-Free-shipping-20pcs-High-Density-Mounting-Type-Photocoupler-DIP-4-PC817C-DIP-Optocoupler-PC817%2F32342458824.html 
+// XM1584: https://alitems.com/g/1e8d1144949a590a4ec116525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2FFree-Shipping-5PCS-XM1584-Ultra-small-size-DC-DC-step-down-power-supply-module-3A-adjustable%2F32262690691.html 
+// LED: https://alitems.com/g/1e8d1144949a590a4ec116525dc3e8/?ulp=https%3A%2F%2Fwww.aliexpress.com%2Fitem%2F100Pcs-5mm-White-Ultra-Bright-LED-Light-Lamp-Emitting-Diodes-15000MCD%2F1831428516.html
+
 const int buttonPin = 11;    // Кнопка спуска
 const int ledPin = 12;       // Пин с сигнальным светодиодом
 const int triggerPin = 10;   // MOSFET с реле
@@ -101,4 +111,3 @@ void playTone(int tone, int duration) {
   }
   digitalWrite(ledPin, LOW);
 }
-
