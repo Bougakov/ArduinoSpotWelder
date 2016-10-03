@@ -1,5 +1,5 @@
 const int buttonPin = 11;    // Кнопка спуска
-const int ledPin = 12;       // Пин с сигнельным светодиодом
+const int ledPin = 12;       // Пин с сигнальным светодиодом
 const int triggerPin = 10;   // MOSFET с реле
 const int buzzerPin = 9;     // Пищалка
 const int analogPin = A3;    // Переменный резистор 10К для выставления длины импульса
@@ -69,9 +69,11 @@ void loop() {
     delay(1);
 
     // И сразу после последнего писка приоткрываем MOSFET на нужное количество миллисекунд:
+    digitalWrite(ledPin,     HIGH);
     digitalWrite(triggerPin, HIGH);
     delay(weldingTime);
     digitalWrite(triggerPin, LOW);
+    digitalWrite(ledPin,     LOW);
 
     Serial.println("== Welding ended! ==");
     delay(1000);
@@ -90,10 +92,13 @@ void loop() {
 
 // В эту функцию вынесен код, обслуживающий пищалку:
 void playTone(int tone, int duration) {
+  digitalWrite(ledPin, HIGH);
   for (long i = 0; i < duration * 1000L; i += tone * 2) {
     digitalWrite(buzzerPin, HIGH);
     delayMicroseconds(tone);
     digitalWrite(buzzerPin, LOW);
     delayMicroseconds(tone);
   }
+  digitalWrite(ledPin, LOW);
 }
+
